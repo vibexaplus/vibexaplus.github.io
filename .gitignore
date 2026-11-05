@@ -1,0 +1,3 @@
+# Never commit or deploy APKs: the app is served from GitHub Releases.
+downloads/*.apk
+*.apk

@@ -1,0 +1,79 @@
+/* Vibexa website tokens, matching the app's Vibexa palette. 8 px base, 4 px steps. Light theme only. */
+@font-face { font-family: "Plus Jakarta Sans"; src: url("../fonts/PlusJakartaSans-Variable.woff2") format("woff2"); font-weight: 400 800; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("../fonts/Inter-Variable.woff2") format("woff2"); font-weight: 400 700; font-display: swap; }
+:root {
+  /* Colour: brand */
+  --c-navy: #14213D;          /* ink, Plus button, footer */
+  --c-navy-2: #1F3A68;        /* Plus button hover, gradient stop */
+  --c-amber: #FCA311;         /* accent, primary button (always with navy text) */
+  --c-amber-hover: #FFB52E;
+  --c-amber-active: #F08A00;
+  --c-amber-light: #FFC15E;   /* amber text on navy, hover */
+  --c-amber-ink: #8A5300;     /* amber as text on light: links, eyebrows */
+  --c-amber-tint: #FFF1D6;    /* eyebrow chip, highlight wash */
+  --c-coral: #F2645B;         /* logo gradient end only, never text */
+  /* Colour: surfaces */
+  --c-white: #FFFFFF;         /* cards, header */
+  --c-paper: #F5F6FA;         /* page background */
+  --c-mist: #EFF1F6;          /* secondary hover, SHA field */
+  --c-fog: #E9ECF3;
+  --c-cloud: #E2E6EE;         /* pressed, disabled fill */
+  --c-hairline: #DFE3EB;      /* card borders, dividers (decorative) */
+  /* Colour: text */
+  --c-ink: var(--c-navy);     /* 15.97:1 on white, 14.79:1 on paper */
+  --c-ink-2: #4A5468;         /* secondary 7.61 / 7.05 */
+  --c-ink-3: #5F6878;         /* meta 5.62 / 5.20 */
+  --c-outline: #737C90;       /* input/secondary-button borders 4.19 / 3.88 (UI 3:1) */
+  --c-disabled-ink: #737C90;  /* on --c-cloud 3.35 (disabled is exempt) */
+  --c-on-navy: #FFFFFF;
+  --c-on-navy-2: #B8C1D6;     /* 8.85 on navy */
+  --c-success-bg: #DDF1E8; --c-success-ink: #0B3D2B;      /* "Copied" 10.38 */
+  --c-placeholder-bg: #FFEFD2; --c-placeholder-ink: #5C3A00; /* TO-FILL badge 8.99 */
+  --c-focus: var(--c-navy);   /* focus ring on light; use --c-amber on navy */
+  --g-logo: linear-gradient(135deg, #FFCF6B 0%, #FCA311 50%, #F2645B 100%);
+  --g-hero-wash: radial-gradient(60% 60% at 80% 20%, rgba(252,163,17,.18), rgba(252,163,17,0) 70%),
+                 radial-gradient(50% 50% at 10% 90%, rgba(61,90,254,.08), rgba(61,90,254,0) 70%);
+
+  /* Type */
+  --f-display: "Plus Jakarta Sans", system-ui, sans-serif;
+  --f-body: "Inter", system-ui, sans-serif;
+  --t-display: 4rem;    --lh-display: 4.5rem;   /* 64/72  800  -0.02em (mobile 2.5rem/3rem = 40/48) */
+  --t-h1: 3rem;         --lh-h1: 3.5rem;        /* 48/56  800  -0.02em (mobile 2rem/2.5rem = 32/40) */
+  --t-h2: 2.5rem;       --lh-h2: 3rem;          /* 40/48  700  -0.015em (mobile 1.75rem/2.25rem = 28/36) */
+  --t-h3: 1.5rem;       --lh-h3: 2rem;          /* 24/32  700  -0.01em */
+  --t-h4: 1.25rem;      --lh-h4: 1.75rem;       /* 20/28  700 */
+  --t-lead: 1.25rem;    --lh-lead: 2rem;        /* 20/32  Inter 400 (mobile 1.125rem/1.75rem) */
+  --t-body: 1rem;       --lh-body: 1.5rem;      /* 16/24  Inter 400 */
+  --t-small: 0.875rem;  --lh-small: 1.25rem;    /* 14/20  Inter 500 */
+  --t-caption: 0.75rem; --lh-caption: 1rem;     /* 12/16  Inter 600, +0.04em, eyebrows uppercase */
+  --t-button: 1rem;     --lh-button: 1.5rem;    /* 16/24  Jakarta 700 */
+  --t-button-lg: 1.125rem;                      /* 18/24  Jakarta 700 (hero) */
+  --t-mono: 0.8125rem;  --lh-mono: 1.25rem;     /* 13/20  ui-monospace for SHA-256 */
+
+  /* Spacing (8 px base, 4 px steps) */
+  --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 20px; --s-6: 24px;
+  --s-8: 32px; --s-10: 40px; --s-12: 48px; --s-16: 64px; --s-20: 80px; --s-24: 96px; --s-32: 128px;
+
+  /* Radius (from the app's Shape.kt) */
+  --r-xs: 6px; --r-sm: 10px; --r-md: 16px; --r-lg: 24px; --r-xl: 32px; --r-pill: 999px;
+  /* Elevation: the light UI uses borders, and shadows only on hero/download cards and screenshots */
+  --shadow-card: 0 1px 2px rgba(20,33,61,.06), 0 8px 24px rgba(20,33,61,.08);
+  --shadow-lift: 0 2px 4px rgba(20,33,61,.08), 0 16px 40px rgba(20,33,61,.14);
+  --shadow-sm: 0 1px 2px rgba(20,33,61,.08), 0 2px 8px rgba(20,33,61,.10);
+  --shadow-amber: 0 8px 24px rgba(240,138,0,.32);
+
+  /* Sizing */
+  --container: 1200px; --container-narrow: 760px; --gutter: 24px;
+  --tap: 48px; --tap-min: 44px; --btn-h: 48px; --btn-h-lg: 56px; --header-h: 72px;
+
+  /* Motion (from the app's Motion.kt) */
+  --d-instant: 90ms; --d-short: 150ms; --d-medium: 210ms; --d-long: 300ms; --d-xlong: 450ms;
+  --e-standard: cubic-bezier(.2, 0, 0, 1);
+  --e-decel: cubic-bezier(.05, .7, .1, 1);
+  --e-accel: cubic-bezier(.3, 0, .8, .15);
+}
+@media (max-width: 767px) { :root { --gutter: 20px; --header-h: 64px; } }
+@media (prefers-reduced-motion: reduce) {
+  :root { --d-short: 0ms; --d-medium: 0ms; --d-long: 0ms; --d-xlong: 0ms; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
