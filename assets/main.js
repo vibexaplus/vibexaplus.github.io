@@ -1,4 +1,4 @@
-/* Vibexa site: fills values from config.js, renders "to be filled" badges, menu, copy, carousel, reveal. No trackers. */
+/* Vibexa site: fills values from config.js, renders "to be filled" badges, menu, copy, carousel, reveal. Website counts live in analytics.js. */
 (function () {
   var C = window.VIBEXA || {}, PH = "To be filled at release";
   function get(p) { return p.split(".").reduce(function (o, k) { return o == null ? o : o[k]; }, C); }

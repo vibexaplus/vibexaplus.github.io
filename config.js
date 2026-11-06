@@ -13,7 +13,15 @@ window.VIBEXA = {
   },
   minAndroid: "8.0",
   releaseDate: "5 Nov 2026",
-  privacyDate: "5 Nov 2026",
+  privacyDate: "6 Nov 2026",
   supportUrl: "https://github.com/vibexaplus/vibexa/issues",
-  siteUrl: "https://vibexaplus.github.io/"
+  siteUrl: "https://vibexaplus.github.io/",
+  /* Website-only public GoatCounter count address. No account email and no secrets.
+     Set enabled to false to load nothing. download-vibexa-plus counts button
+     activations on this site, not GitHub's release asset download_count. */
+  analytics: {
+    enabled: true,
+    countUrl: "https://vibexaplus.goatcounter.com/count",
+    scriptUrl: "https://gc.zgo.at/count.js"
+  }
 };
