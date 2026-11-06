@@ -475,6 +475,10 @@ test("site wiring keeps one download, app privacy claims, and the public endpoin
   assert.ok(privacy.includes("https://www.goatcounter.com/help/gdpr"));
   assert.ok(privacy.includes(DOWNLOAD_EVENT));
   assert.ok(privacy.includes("download_count"));
+  assert.ok(privacy.includes("download requests recorded for the GitHub release asset"));
+  assert.ok(privacy.includes("not a count of unique people, confirmed completed transfers, installs, or website clicks"));
+  assert.equal(privacy.includes("GitHub counts finished downloads"), false);
+  assert.equal(privacy.includes("finished APK downloads"), false);
   assert.ok(privacy.includes("Global Privacy Control"));
   assert.ok(privacy.includes("Do Not Track"));
   assert.ok(privacy.includes("#toggle-goatcounter"));
